@@ -1,0 +1,21 @@
+language: php
+
+php:
+  - 5.5
+
+branches:
+  only:
+    - master
+
+before_script:
+ - git checkout $TRAVIS_BRANCH
+ - composer self-update
+ - composer install
+ - mkdir docs
+ - mkdir docs/coverage
+
+script:
+ - php ./vendor/codeception/codeception/codecept run unit --coverage-xml clover.xml --json coveralls-upload.json
+
+after_success:
+ - php vendor/bin/coveralls -c ./.coveralls.yml -v --exclude-no-stmt

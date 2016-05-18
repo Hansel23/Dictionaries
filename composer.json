@@ -1,0 +1,30 @@
+{
+	"name": "Hansel23/Dictionary",
+	"description": "Dictionary with interface. It's losely based on the Dictionary type of other famous languages. Strict typed.",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Benjamin Bruska",
+			"email": "benjamin.bruska@gmx.de"
+		}
+	],
+	"require": {
+		"php": ">=5.5"
+	},
+	"require-dev": {
+		"codeception/codeception": "2.*",
+		"satooshi/php-coveralls": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hansel23\\Dictionary\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Hansel23\\Dictionary\\Tests\\Unit\\": "tests/unit/"
+		}
+	}
+}
