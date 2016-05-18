@@ -4,9 +4,9 @@ namespace Hansel23\Dictionary;
 use JsonSerializable;
 
 /**
- * Class MemberDictionary
+ * Class StringDictionary
  *
- * @package Hansel23\StronglyTyped
+ * @package Hansel23\Dictionary
  */
 final class StringDictionary extends Dictionary implements JsonSerializable
 {
