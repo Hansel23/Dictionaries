@@ -3,7 +3,7 @@
 	"description": "Dictionary with interface. It's losely based on the Dictionary type of other famous languages. Strict typed.",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
-	"license": "proprietary",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Benjamin Bruska",

@@ -11,7 +11,5 @@ vagrant
 # composer
 vendor
 !dist/public/vendor
-composer.lock
 tests/_output/*
 docs/coverage
-tests/_output/*

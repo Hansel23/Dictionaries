@@ -1,4 +1,9 @@
-[![Coverage Status](https://coveralls.io/repos/github/Hansel23/GenericLists/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/GenericLists?branch=master)
+[![Build Status](https://travis-ci.org/Hansel23/Dictionaries.svg?branch=master)](https://travis-ci.org/Hansel23/Dictionaries)
+[![Coverage Status](https://coveralls.io/repos/github/Hansel23/Dictionaries/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/Dictionaries?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/hansel23/dictionaries/v/stable)](https://packagist.org/packages/hansel23/dictionaries)
+[![Latest Unstable Version](https://poser.pugx.org/hansel23/dictionaries/v/unstable)](https://packagist.org/packages/hansel23/dictionaries)
+[![Total Downloads](https://poser.pugx.org/hansel23/dictionaries/downloads)](https://packagist.org/packages/hansel23/dictionaries)
+[![License](https://poser.pugx.org/hansel23/dictionaries/license)](https://packagist.org/packages/hansel23/dictionaries)
 
 # Dictionary
 
