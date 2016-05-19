@@ -1,5 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/Hansel23/Dictionaries/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/Dictionaries?branch=master)
-
+[![Coverage Status](https://coveralls.io/repos/github/Hansel23/GenericLists/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/GenericLists?branch=master)
 # Dictionary
 
 Dictionary Type. Keys and values are strongly typed, so you will know what you get.
@@ -27,7 +27,7 @@ Now you can add your members to the dictionary like this:
 	$members->add($memberId, $member);
 	?>
     
-Where $memberId is of the type MemberId and $member of thy type Member.
+Where $memberId is of the type MemberId and $member of the type Member.
 
 But you can also add a member with the identifier like you can add a normal key-value-pair (string/int) in a normal array.
 
