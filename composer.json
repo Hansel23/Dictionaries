@@ -1,5 +1,5 @@
 {
-	"name": "Hansel23/Dictionaries",
+	"name": "hansel23/dictionaries",
 	"description": "Dictionary with interface. It's losely based on the Dictionary type of other famous languages. Strict typed.",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
