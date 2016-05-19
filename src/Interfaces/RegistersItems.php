@@ -1,12 +1,12 @@
 <?php
-namespace Hansel23\Dictionary\Interfaces;
+namespace Hansel23\Dictionaries\Interfaces;
 
 use ArrayAccess, Iterator, Countable;
 
 /**
  * Interface RegistersItems
  *
- * @package Hansel23\Dictionary\Interfaces
+ * @package Hansel23\Dictionaries\Interfaces
  */
 interface RegistersItems extends ArrayAccess, Iterator, Countable
 {

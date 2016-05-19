@@ -76,7 +76,7 @@ Better is this way:
             }
             ?>
 
-**Hint: You can also use scalar types in your dictionary! Look at the following example: **
+**Hint: You can also use scalar types in your dictionary! Look at the following example:**
     
     <?php
     final class StringIntegerDictionary extends Dictionary

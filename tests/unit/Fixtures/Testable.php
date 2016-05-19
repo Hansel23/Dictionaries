@@ -1,10 +1,10 @@
 <?php
-namespace Hansel23\Dictionary\Tests\Unit\Fixtures;
+namespace Hansel23\Dictionaries\Tests\Unit\Fixtures;
 
 /**
  * Interface Testable
  *
- * @package Hansel23\Dictionary\Tests\Unit\Fixtures
+ * @package Hansel23\Dictionaries\Tests\Unit\Fixtures
  */
 interface Testable
 {

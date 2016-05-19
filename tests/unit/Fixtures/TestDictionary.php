@@ -1,12 +1,12 @@
 <?php
-namespace Hansel23\Dictionary\Tests\Unit\Fixtures;
+namespace Hansel23\Dictionaries\Tests\Unit\Fixtures;
 
-use Hansel23\Dictionary\Dictionary;
+use Hansel23\Dictionaries\Dictionary;
 
 /**
  * Class TestDictionary
  *
- * @package Hansel23\Dictionary\Tests\Unit\Fixtures
+ * @package Hansel23\Dictionaries\Tests\Unit\Fixtures
  */
 class TestDictionary extends Dictionary
 {

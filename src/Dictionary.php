@@ -1,16 +1,16 @@
 <?php
-namespace Hansel23\Dictionary;
+namespace Hansel23\Dictionaries;
 
-use Hansel23\Dictionary\Exceptions\ArgumentException;
-use Hansel23\Dictionary\Exceptions\InvalidDictionaryException;
-use Hansel23\Dictionary\Exceptions\InvalidKeyException;
-use Hansel23\Dictionary\Exceptions\InvalidTypeException;
-use Hansel23\Dictionary\Interfaces\RegistersItems;
+use Hansel23\Dictionaries\Exceptions\ArgumentException;
+use Hansel23\Dictionaries\Exceptions\InvalidDictionaryException;
+use Hansel23\Dictionaries\Exceptions\InvalidKeyException;
+use Hansel23\Dictionaries\Exceptions\InvalidTypeException;
+use Hansel23\Dictionaries\Interfaces\RegistersItems;
 
 /**
  * Class NewDictionary
  *
- * @package Hansel23\Dictionary
+ * @package Hansel23\Dictionaries
  */
 class Dictionary implements RegistersItems
 {

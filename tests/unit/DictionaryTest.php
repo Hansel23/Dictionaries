@@ -1,9 +1,9 @@
 <?php
-namespace Hansel23\Dictionary\Tests\Unit;
+namespace Hansel23\Dictionaries\Tests\Unit;
 
-use Hansel23\Dictionary\Dictionary;
-use Hansel23\Dictionary\Tests\Unit\Fixtures\TestDictionary;
-use Hansel23\Dictionary\Tests\Unit\Fixtures\TestType;
+use Hansel23\Dictionaries\Dictionary;
+use Hansel23\Dictionaries\Tests\Unit\Fixtures\TestDictionary;
+use Hansel23\Dictionaries\Tests\Unit\Fixtures\TestType;
 
 class DictionaryTest extends \Codeception\TestCase\Test
 {
@@ -24,7 +24,7 @@ class DictionaryTest extends \Codeception\TestCase\Test
 	/**
 	 * @dataProvider KeyProvider
 	 *
-	 * @expectedException \Hansel23\Dictionary\Exceptions\ArgumentException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\ArgumentException
 	 */
 	public function testIfAddingDuplicateKeyThrowsArgumentException( $typeName, $key )
 	{
@@ -95,7 +95,7 @@ class DictionaryTest extends \Codeception\TestCase\Test
 	/**
 	 * @dataProvider InvalidTypeProvider
 	 *
-	 * @expectedException \Hansel23\Dictionary\Exceptions\InvalidTypeException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidTypeException
 	 */
 	public function testIfInvalidKeyTypesThrowsException( $typeName, $invalidKey )
 	{
@@ -131,7 +131,7 @@ class DictionaryTest extends \Codeception\TestCase\Test
 	}
 
 	/**
-	 * @expectedException \Hansel23\Dictionary\Exceptions\InvalidKeyException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidKeyException
 	 */
 	public function testIfGettingEntryByInvalidKeyThrowsInvalidKeyException()
 	{
@@ -207,7 +207,7 @@ class DictionaryTest extends \Codeception\TestCase\Test
 	}
 
 	/**
-	 * @expectedException \Hansel23\Dictionary\Exceptions\InvalidDictionaryException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidDictionaryException
 	 */
 	public function testIfMergingDifferentDictionariesThrowsException()
 	{

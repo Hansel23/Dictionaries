@@ -1,5 +1,5 @@
 {
-	"name": "Hansel23/Dictionary",
+	"name": "Hansel23/Dictionaries",
 	"description": "Dictionary with interface. It's losely based on the Dictionary type of other famous languages. Strict typed.",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
@@ -19,12 +19,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Hansel23\\Dictionary\\": "src/"
+			"Hansel23\\Dictionaries\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Hansel23\\Dictionary\\Tests\\Unit\\": "tests/unit/"
+			"Hansel23\\Dictionaries\\Tests\\Unit\\": "tests/unit/"
 		}
 	}
 }

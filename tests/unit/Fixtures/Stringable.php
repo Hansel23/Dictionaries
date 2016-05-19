@@ -1,10 +1,10 @@
 <?php
-namespace Hansel23\Dictionary\Tests\Unit\Fixtures;
+namespace Hansel23\Dictionaries\Tests\Unit\Fixtures;
 
 /**
  * Class Stringable
  *
- * @package Hansel23\Dictionary\Tests\Unit\Fixtures
+ * @package Hansel23\Dictionaries\Tests\Unit\Fixtures
  */
 class Stringable
 {

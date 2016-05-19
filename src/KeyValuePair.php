@@ -1,10 +1,10 @@
 <?php
-namespace Hansel23\Dictionary;
+namespace Hansel23\Dictionaries;
 
 /**
  * Class KeyValuePair
  *
- * @package Hansel23\Dictionary
+ * @package Hansel23\Dictionaries
  */
 final class KeyValuePair 
 {

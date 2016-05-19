@@ -1,12 +1,12 @@
 <?php
-namespace Hansel23\Dictionary;
+namespace Hansel23\Dictionaries;
 
 use JsonSerializable;
 
 /**
  * Class StringDictionary
  *
- * @package Hansel23\Dictionary
+ * @package Hansel23\Dictionaries
  */
 final class StringDictionary extends Dictionary implements JsonSerializable
 {

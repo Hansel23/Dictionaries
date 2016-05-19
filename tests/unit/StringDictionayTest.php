@@ -1,8 +1,8 @@
 <?php
-namespace Hansel23\Dictionary\Tests\Unit;
+namespace Hansel23\Dictionaries\Tests\Unit;
 
-use Hansel23\Dictionary\StringDictionary;
-use Hansel23\Dictionary\Tests\Unit\Fixtures\Stringable;
+use Hansel23\Dictionaries\StringDictionary;
+use Hansel23\Dictionaries\Tests\Unit\Fixtures\Stringable;
 
 class StringDictionaryTest extends \Codeception\TestCase\Test
 {
@@ -16,7 +16,7 @@ class StringDictionaryTest extends \Codeception\TestCase\Test
 	/**
 	 * @dataProvider InvalidTypeProvider
 	 *
-	 * @expectedException \Hansel23\Dictionary\Exceptions\InvalidTypeException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidTypeException
 	 */
 	public function testIfInvalidKeyThrowsException( $type )
 	{
@@ -27,7 +27,7 @@ class StringDictionaryTest extends \Codeception\TestCase\Test
 	/**
 	 * @dataProvider InvalidTypeProvider
 	 *
-	 * @expectedException \Hansel23\Dictionary\Exceptions\InvalidTypeException
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidTypeException
 	 */
 	public function testIfInvalidValueThrowsException( $type )
 	{

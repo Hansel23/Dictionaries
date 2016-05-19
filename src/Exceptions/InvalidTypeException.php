@@ -1,10 +1,10 @@
 <?php
-namespace Hansel23\Dictionary\Exceptions;
+namespace Hansel23\Dictionaries\Exceptions;
 
 /**
  * Class InvalidTypeException
  *
- * @package Hansel23\Dictionary\Exceptions
+ * @package Hansel23\Dictionaries\Exceptions
  */
 class InvalidTypeException extends DictionaryException
 {
