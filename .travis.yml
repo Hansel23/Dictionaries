@@ -10,7 +10,7 @@ branches:
 before_script:
  - git checkout $TRAVIS_BRANCH
  - composer self-update
- - composer install
+ - composer update -o
  - mkdir docs
  - mkdir docs/coverage
 
