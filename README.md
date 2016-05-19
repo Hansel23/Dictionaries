@@ -57,24 +57,25 @@ Imagine you create an interface with a public method that needs an array as argu
 But you are expecting a specific type of objects in the array. Sure you can type hint arrays, but do you really want to hope, that everyone is giving you the right array?
 Or do you want to validate the right type of objects in the array in your implementations?
 
-Better is this way: 
+Better this way: 
 
 1. Create a new Dictionary class, e.g. MemberDictionary
 2. Extend it from the Dictionary.
 3. Overwrite the constructor and set the needed type of the key and value.
-4. Use your own dictionary as the typehint!     
+4. Use your own dictionary as the typehint!
 
-            <?php
-            use Hansel23/Dictionaries/Dictionary;
-            
-            final class MemberDictionary extends Dictionary
-            {
-                public function __construct( )
-                { 
-                    parent::__construct( MemberId::class, Member::class );
-                }           
-            }
-            ?>
+Like this: 
+   
+    <?php
+    use Hansel23/Dictionaries/Dictionary;
+    final class MemberDictionary extends Dictionary
+    {
+        public function __construct( )
+        { 
+            parent::__construct( MemberId::class, Member::class );
+        }
+    }
+    ?>
 
 **Hint: You can also use scalar types in your dictionary! Look at the following example:**
     
