@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Hansel23/Dictionary/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/Dictionary?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Hansel23/Dictionaries/badge.svg?branch=master)](https://coveralls.io/github/Hansel23/Dictionaries?branch=master)
 
 # Dictionary
 
@@ -53,7 +53,7 @@ Or you want to get a specific member of the dictionary by member id:
     ?>
 
 Another nice thing is, that you can now better type hint your arrays.
-Immagine you create an interface with a public method that needs an array as argument.
+Imagine you create an interface with a public method that needs an array as argument.
 But you are expecting a specific type of objects in the array. Sure you can type hint arrays, but do you really want to hope, that everyone is giving you the right array?
 Or do you want to validate the right type of objects in the array in your implementations?
 
@@ -65,7 +65,7 @@ Better is this way:
 4. Use your own dictionary as the typehint!     
 
             <?php
-            use Hansel23/Dictionary/Dictionary;
+            use Hansel23/Dictionaries/Dictionary;
             
             final class MemberDictionary extends Dictionary
             {
