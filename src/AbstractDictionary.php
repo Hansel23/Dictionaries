@@ -252,8 +252,8 @@ abstract class AbstractDictionary implements RegistersItems
 		{
 			$typeName = gettype( $typeToValidate );
 		}
-
-		if ( $typeName !== $validTypeName )
+		
+		if ( $typeName != $validTypeName && !($typeToValidate instanceof $validTypeName) )
 		{
 			throw new InvalidTypeException(
 				sprintf( 'Invalid element of type %s, expected: %s', $typeName, $validTypeName )

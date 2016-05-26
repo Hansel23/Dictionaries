@@ -2,6 +2,7 @@
 namespace Hansel23\Dictionaries\Tests\Unit;
 
 use Hansel23\Dictionaries\Dictionary;
+use Hansel23\Dictionaries\Tests\Unit\Fixtures\Testable;
 use Hansel23\Dictionaries\Tests\Unit\Fixtures\TestDictionary;
 use Hansel23\Dictionaries\Tests\Unit\Fixtures\TestType;
 
@@ -215,5 +216,17 @@ class DictionaryTest extends \Codeception\TestCase\Test
 		$anotherDictionary = new TestDictionary( gettype( 'teststring' ), TestType::class );
 
 		$dictionary->merge( $anotherDictionary );
+	}
+	
+	public function testIfObjectImplementingInterfaceUsedInDictionaryCanBeAdded()
+	{
+		$dictionary = new Dictionary( Testable::class, Testable::class );
+		
+		$key = new TestType( 'key' );
+		$value = new TestType( 'value' );
+		
+		$dictionary->add( $key, $value );
+		
+		$this->assertTrue( $dictionary->offsetExists( $key ) );
 	}
 }
