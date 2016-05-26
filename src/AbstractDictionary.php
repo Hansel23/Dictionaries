@@ -110,8 +110,9 @@ abstract class AbstractDictionary implements RegistersItems
 	/**
 	 * @param mixed $offset
 	 *
-	 * @return KeyValuePair
+	 * @return mixed
 	 * @throws InvalidKeyException
+	 * @throws InvalidTypeException
 	 */
 	public function offsetGet( $offset )
 	{
