@@ -158,9 +158,6 @@ abstract class AbstractDictionary implements RegistersItems
 		unset($this->keyValuePairs[ $this->keyMap[ $stringifiedKey ] ]);
 		unset($this->keyMap[ $stringifiedKey ]);
 
-		$this->keyMap = array_flip( array_keys( $this->keyMap ) );
-		$this->keyValuePairs = array_values( $this->keyValuePairs );
-
 		$this->itemCount--;
 	}
 
@@ -214,6 +211,8 @@ abstract class AbstractDictionary implements RegistersItems
 	 */
 	public function rewind()
 	{
+		$this->keyMap          = array_flip( array_keys( $this->keyMap ) );
+		$this->keyValuePairs   = array_values( $this->keyValuePairs );
 		$this->currentPosition = 0;
 	}
 
@@ -238,14 +237,14 @@ abstract class AbstractDictionary implements RegistersItems
 	}
 
 	/**
-	 * @param mixed $typeToValidate
+	 * @param mixed  $typeToValidate
 	 * @param string $validTypeName
 	 *
 	 * @throws InvalidTypeException
 	 */
 	private function validateType( $typeToValidate, $validTypeName )
 	{
-		if( is_object( $typeToValidate ) )
+		if ( is_object( $typeToValidate ) )
 		{
 			$typeName = get_class( $typeToValidate );
 		}
@@ -253,7 +252,7 @@ abstract class AbstractDictionary implements RegistersItems
 		{
 			$typeName = gettype( $typeToValidate );
 		}
-		
+
 		if ( $typeName != $validTypeName && !($typeToValidate instanceof $validTypeName) )
 		{
 			throw new InvalidTypeException(
