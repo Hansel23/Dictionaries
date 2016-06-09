@@ -229,4 +229,46 @@ class DictionaryTest extends \Codeception\TestCase\Test
 		
 		$this->assertTrue( $dictionary->offsetExists( $key ) );
 	}
+
+	public function testIfUnsettingWhileIteratingDoesNotSkipItems()
+	{
+		$dictionary = new Dictionary( gettype( 2 ), gettype( 'string' ) );
+		$dictionary->add( 1, 'First' );
+		$dictionary->add( 2, 'Second' );
+		$dictionary->add( 3, 'Third' );
+		$dictionary->add( 4, 'Fourth' );
+		$dictionary->add( 5, 'Fifth' );
+		
+		$dictionary->offsetUnset( 2 );
+
+		$remainingValues = [];
+		foreach ( $dictionary as $key => $value )
+		{
+			if( $key === 3)
+			{
+				$dictionary->offsetUnset( 3 );
+			}
+			else
+			{
+				$remainingValues[] = $value;
+			}
+		}
+		
+		$this->assertEquals( [ 'First', 'Fourth', 'Fifth' ], $remainingValues );
+	}
+
+	/**
+	 * @expectedException \Hansel23\Dictionaries\Exceptions\InvalidKeyException
+	 */
+	public function testAccessingUnsettedItemThrowsException()
+	{
+		$dictionary = new Dictionary( gettype( 2 ), gettype( 'string' ) );
+		$dictionary->add( 1, 'First' );
+
+		foreach ( $dictionary as $key => $value )
+		{
+			$dictionary->offsetUnset( $key );
+			$dictionary->offsetGet( $key );
+		}
+	}
 }
