@@ -18,7 +18,8 @@ class DictionaryTest extends \Codeception\TestCase\Test
 			[ gettype(true), true ],
 			[ TestType::class, new TestType( 'test' ) ],
 			[ gettype([]), [ 'test' ] ],
-		    [ gettype(null), null ],	    
+		    [ gettype(null), null ],
+			[ gettype('teststring'), '123' ],
 		];
 	}
 
@@ -37,7 +38,7 @@ class DictionaryTest extends \Codeception\TestCase\Test
 	/**
 	 * @dataProvider KeyProvider
 	 */
-	public function testIfAddedEntryExists(  $typeName, $key )
+	public function testIfAddedEntryExists( $typeName, $key )
 	{
 		$dictionary = new Dictionary( $typeName, gettype( 'value' ) );
 		$dictionary->add( $key, 'abc' );
