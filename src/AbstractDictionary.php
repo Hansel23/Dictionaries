@@ -271,7 +271,7 @@ abstract class AbstractDictionary implements RegistersItems
 	{
 		if ( is_scalar( $key ) )
 		{
-			return md5( sprintf( '%s:%s', gettype( $key ), $key ) );
+			return md5( $key );
 		}
 		else
 		{
