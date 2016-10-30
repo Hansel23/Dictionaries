@@ -65,20 +65,29 @@ Or do you want to validate the right type of objects in the array in your implem
 Better this way: 
 
 1. Create a new Dictionary class, e.g. MemberDictionary
-2. Extend it from the Dictionary.
-3. Overwrite the constructor and set the needed type of the key and value.
+2. Extend AbstractDictionary.
+3. Add typehints for the key and value in your IDE
 4. Use your own dictionary as the typehint!
 
 Like this: 
    
     <?php
     use Hansel23/Dictionaries/Dictionary;
-    final class MemberDictionary extends Dictionary
+    /**
+     * @method MemberId key()
+     * @method Member current()
+     **/
+    final class MemberDictionary extends AbstractDictionary
     {
-        public function __construct( )
-        { 
-            parent::__construct( MemberId::class, Member::class );
-        }
+       	protected function getNameOfKeyType()
+       	{
+       		return MemberId::class;
+       	}
+       
+       	protected function getNameOfValueType()
+       	{
+       		return Member::class;
+       	}
     }
     ?>
 
@@ -87,8 +96,23 @@ Like this:
     <?php
     final class StringIntegerDictionary extends Dictionary
     {
+        private $keyType;
+        private $valueType
         public function __construct()
         {
-            parent::__construct( gettype( '' ), gettype( 1 ) );
+            parent::__construct();
+            
+            $this->keyType   = gettype( 1 );
+            $this->valueType = gettype( '' );
+        }
+        
+        protected function getNameOfKeyType()
+        {
+            return $this->keyType;
+        }
+       
+        protected function getNameOfValueType()
+        {
+            return $this->valueType;
         }
     }
