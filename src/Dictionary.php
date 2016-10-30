@@ -8,7 +8,7 @@ use Hansel23\Dictionaries\Interfaces\RegistersItems;
  *
  * @package Hansel23\Dictionaries
  */
-class Dictionary extends AbstractDictionary implements RegistersItems
+class Dictionary extends AbstractDictionary
 {
 	/**
 	 * @var string
