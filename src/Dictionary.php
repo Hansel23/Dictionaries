@@ -1,8 +1,6 @@
 <?php
 namespace Hansel23\Dictionaries;
 
-use Hansel23\Dictionaries\Interfaces\RegistersItems;
-
 /**
  * Class NewDictionary
  *
